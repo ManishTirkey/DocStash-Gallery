@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e6dfdf;
+}
+
+#modal-btn {
+  display: none !important;
+}
+
+#pin {
+  margin-left: 0.8em;
+  padding: 0.2em 0.6em;
+  background-color: #efefef;
+  border: none;
+  outline: 1px solid rgba(204, 195, 195, 50%);
+  border-radius: 4px;
+}
+#pin:hover,
+#pin:focus {
+  border: none;
+}
+
+.my-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.loading-container {
+  height: 260px;
+  width: 200px;
+  border-radius: 5px;
+  background-color: #b2b2c0;
+  box-shadow: 0px 0px 25px 5px rgb(190, 190, 201);
+  display: inline-flex;
+  flex-direction: column;
+  margin: 0.3em 0.5em;
+}
+
+.loading__image {
+  height: 100%;
+  width: 100%;
+}
+
+.loading__title {
+  padding: 8px;
+  font-size: 22px;
+  width: 40%;
+  font-weight: 700;
+  height: 1rem;
+  margin: 1rem;
+  border-radius: 3px;
+}
+
+/* Card description */
+.loading__description {
+  padding: 8px;
+  font-size: 16px;
+  height: 3rem;
+  margin: 1rem;
+  border-radius: 3px;
+}
+
+/* The loading Class */
+.loading {
+  overflow: hidden;
+  position: relative;
+  background-color: #0000002e;
+  border-radius: 5px;
+}
+
+/* The moving element */
+.loading::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  border-radius: 5px;
+  transform: translateX(-100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(transparent),
+    color-stop(rgb(61 61 61 /22%)),
+    to(transparent)
+  );
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgb(61 61 61 / 22%),
+    transparent
+  );
+
+  /* Adding animation */
+  animation: loading 0.8s infinite;
+}
+
+/* Loading Animation */
+@keyframes loading {
+  100% {
+    transform: translateX(100%);
+  }
+}

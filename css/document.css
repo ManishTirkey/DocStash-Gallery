@@ -1,0 +1,31 @@
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+.doc_container {
+  position: relative;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+}
+
+.btns a {
+  margin: 0 0.4em;
+}
+
+form .field {
+  border: none;
+  margin-top: 25px;
+}
+
+form .field input[type="file"] {
+  border: none;
+  margin-bottom: 25px;
+}
+
+.doc {
+  margin-top: 1em;
+}
